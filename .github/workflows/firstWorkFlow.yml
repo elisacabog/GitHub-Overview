@@ -5,11 +5,13 @@ on:
 
 jobs: 
   firstjob:
-    runs-on: self-hosted
+    runs-on: ubuntu-latest
     steps:
       - name: firstJob script
         shell: bash
         run: echo Hello World! This is the first job
+      - name: checkout
+        uses: actions/checkout@v4
         
   secondjob:
     runs-on: ubuntu-latest
@@ -19,3 +21,5 @@ jobs:
         run: |
           echo this is the second job
           echo and this is a multi-line script
+     
+     
