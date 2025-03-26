@@ -18,4 +18,4 @@ jobs:
         shell: bash
         run: |
           echo this is the second job
-          echo and thos is a multi-line script
+          echo and this is a multi-line script
