@@ -12,6 +12,14 @@ jobs:
         run: echo Hello World! This is the first job
       - name: checkout
         uses: actions/checkout@v4
+      - name: greetings
+        id: greetings
+        uses: actions/hello-world-javascript-action@main
+        with:
+          who-to-greet: 'Mona the Octocat'        
+      - name: time
+        run: |
+          echo "The time of the greeting was at ${{ steps.greeting.outputs.time }}
         
   secondjob:
     runs-on: ubuntu-latest
